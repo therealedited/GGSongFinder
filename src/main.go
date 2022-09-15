@@ -1,7 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"website.com/webapp"
+)
 
 func main() {
-	fmt.Printf("hello, world\n")
+	fmt.Print(" [*] Starting website...")
+	webapp.StartWebsite()
 }
