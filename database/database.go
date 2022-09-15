@@ -5,13 +5,14 @@ import (
 	"fmt"
 	"os"
 
+	_ "github.com/go-sql-driver/mysql"
 	"gopkg.in/ini.v1"
 )
 
 var Inst *sql.DB
 
 func init() {
-	dbCfg, err := ini.Load("db.ini")
+	dbCfg, err := ini.Load("./configs/global.ini")
 	if err != nil {
 		fmt.Printf("Failed to open database configuration: %v", err)
 		os.Exit(-2)
