@@ -1,0 +1,4 @@
+Select all composers for a specific song with id=X =>
+    SELECT artist.name FROM artist WHERE artist.idArtist IN (SELECT artistset.idArtist FROM artistset where idSong=X)
+Select all aliases for an artist with id=X =>
+    SELECT artist.idArtist, artistaliases.name FROM artistaliases INNER JOIN artist ON artist.idArtist=X;
